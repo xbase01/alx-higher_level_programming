@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import sys
 
-args = sys.argv[1:]
-total_sum = 0
-for arg in args:
-    total_sum += int(arg)
+if __name__ == "__main__":
+    """Print the addition of all arguments."""
 
-print(total_sum)
+    import sys
+
+    total = 0
+    for i in range(len(sys.argv) - 1):
+        total += int(sys.argv[i + 1])
+    print("{}".format(total))
