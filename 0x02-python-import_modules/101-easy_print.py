@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import python_for_me
+__builtins__.__dict__['p,r,i,n,t'.replace(',', '')]('#pythoniscool')
