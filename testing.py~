@@ -1,0 +1,20 @@
+age = eval(input("Enter age: "))
+if (age >= 1) and (age <= 18):
+    print("Important Birthday")
+elif (age == 21) or (age == 50):
+    print("Important Birthday")
+elif not(age < 65):
+    print("Important Birthday")
+else:
+    print("Sorry Not Important Birthday")
+
+age = eval(input("Enter School age: "))
+if (age == 5):
+    print("Go to Kindergarten")
+elif (age >= 6) and (age <= 17):
+    print("Go to grade 1 through 12")
+elif (age > 17):
+    print("Go to college")
+else:
+    print("Don't bother about school")
+    
