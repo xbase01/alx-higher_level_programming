@@ -4,8 +4,8 @@
 module.exports = class Rectangle {
   constructor (width, height) {
     if (this.isValidRectangle(width, height)) {
-	    this.width = width;
-	    this.height = height;
+      this.width = width;
+      this.height = height;
     }
   }
 
@@ -15,13 +15,13 @@ module.exports = class Rectangle {
 
   print () {
     if (!this.width || !this.height) {
-	    return;
+      return;
     }
 
     let rectangleString = '';
 
     for (let i = 0; i < this.height; ++i) {
-	    rectangleString += 'X'.repeat(this.width) + '\n';
+      rectangleString += 'X'.repeat(this.width) + '\n';
     }
 
     console.log(rectangleString);
