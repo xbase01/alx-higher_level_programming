@@ -1,29 +1,22 @@
 #!/usr/bin/node
 
-// Prints a Rectangle with the parameters passed
-module.exports = class Rectangle {
-  constructor (width, height) {
-    if (this.isValidRectangle(width, height)) {
-      this.width = width;
-      this.height = height;
-    }
-  }
+// Defines a Rectangle class that represents a rectangle shape.
 
-  isValidRectangle (width, height) {
-    return typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0;
+class Rectangle {
+  constructor (w, h) {
+    if (w <= 0 || h <= 0 || typeof w !== 'number' || typeof h !== 'number') {
+      return {};
+    }
+
+    this.width = w;
+    this.height = h;
   }
 
   print () {
-    if (!this.width || !this.height) {
-      return;
+    if (this.width && this.height) {
+      for (let i = 0; i < this.height; i++) {
+        console.log('X'.repeat(this.width));
+      }
     }
-
-    let rectangleString = '';
-
-    for (let i = 0; i < this.height; ++i) {
-      rectangleString += 'X'.repeat(this.width) + '\n';
-    }
-
-    console.log(rectangleString);
   }
-};
+}
