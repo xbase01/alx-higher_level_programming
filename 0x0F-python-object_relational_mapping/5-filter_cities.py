@@ -13,6 +13,10 @@ if __name__ == '__main__':
     Access to the database and get the cities
     from the database.
     """
-
-    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
-                         passwd-
+    conn = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+    cur = conn.cursor()
+    cur.execute("""SELECT * FROM cities INNER JOIN states
+                ON cities.state_id = states.id
+                ORDER BY cities.id""")
+    print(", ".join([city[2] for city in cur.fetchall()
+                     if city[4] == argv[4]]))

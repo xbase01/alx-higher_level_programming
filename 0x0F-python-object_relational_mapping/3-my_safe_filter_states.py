@@ -19,7 +19,7 @@ if __name__ == '__main__':
     from the database.
     """
     conn = db.connect(host="localhost", port=3306,
-            user=argv[1], passwd=argv[2], db=argv[3])
+                      user=argv[1], passwd=argv[2], db=argv[3])
     cursor = conn.cursor()
 
     cursor.execute(
